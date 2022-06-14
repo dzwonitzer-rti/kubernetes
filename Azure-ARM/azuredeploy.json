@@ -471,7 +471,8 @@
                 "tier": "Free"
             },
             "apiServerAccessProfile": {
-                "enablePrivateCluster": "true"
+                "enablePrivateCluster": "true",
+                "privateDNSZone": "system"
             }
             "properties": {
                 "kubernetesVersion": "[variables('KubernetesVersion')]",
