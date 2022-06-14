@@ -27,7 +27,7 @@ Here's **how** it will be deployed. You must have a Managed Identity created to 
 5. **Data Curator Role** added for the Purview account for the Purview specific Application Registration.
 
     
-## Deployment steps
+## Deployment steps - USE FOR RTI
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdzwonitzer-rti%2Fkubernetes%2Fmaster%2FAzure-ARM%2Fazuredeploy.json/createUIDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2Fdzwonitzer-rti%2Fkubernetes%2Fmaster%2FAzure-ARM%2FcreateUIDefinition.json)
 
