@@ -469,14 +469,14 @@
             "sku": {
                 "name": "Basic",
                 "tier": "Free"
-            },
-            "apiServerAccessProfile": {
-                "enablePrivateCluster": "true",
-                "privateDNSZone": "system"
             }
             "properties": {
                 "kubernetesVersion": "[variables('KubernetesVersion')]",
                 "dnsPrefix": "profisee",
+                "apiServerAccessProfile": {
+                    "enablePrivateCluster": "true",
+                    "privateDNSZone": "system"
+                }
                 "agentPoolProfiles": [
                     {
                         "name": "nplinux1",
