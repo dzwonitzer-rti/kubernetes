@@ -1,0 +1,24 @@
+RTI uses the ARM deployment.  Use the Azure-ARM folder.
+
+We must make several customizations to support an RTI specific deployment.  This will still use parameters and the deployment UI to stay well aligned with the Profisee deployment code.
+
+1. Update the Azure-RM\Readme.md file to change the pointers for the deploy to Azure button.
+2. Modify azuredeploy.json, add the tags section 
+
+            "type": "Microsoft.ContainerService/managedClusters",
+            "apiVersion": "2020-07-01",
+            "name": "[variables('KubernetesClusterName')]",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "Charge_Code": "0165197.003.001.007.006"
+            }
+            "dependsOn": ["[resourceId('Microsoft.Resources/deploymentScripts', 'PreReqChecks')]"],
+
+3. Modify Azuredeploy.json to setup AKS as a private cluster
+  Add the below section to the resource of type  "Microsoft.ContainerService/managedClusters",
+  This activates the AKS cluster as a private cluster
+  
+              "apiServerAccessProfile": {
+                "enablePrivateCluster": "true",
+                "privateDNSZone": "system"
+            }
