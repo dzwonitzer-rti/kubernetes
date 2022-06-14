@@ -464,19 +464,19 @@
             "location": "[resourceGroup().location]",
             "tags": {
                 "Charge_Code": "0165197.003.001.007.006"
-            }
+            },
             "dependsOn": ["[resourceId('Microsoft.Resources/deploymentScripts', 'PreReqChecks')]"],
             "sku": {
                 "name": "Basic",
                 "tier": "Free"
-            }
+            },
             "properties": {
                 "kubernetesVersion": "[variables('KubernetesVersion')]",
                 "dnsPrefix": "profisee",
                 "apiServerAccessProfile": {
                     "enablePrivateCluster": "true",
                     "privateDNSZone": "system"
-                }
+                },
                 "agentPoolProfiles": [
                     {
                         "name": "nplinux1",
