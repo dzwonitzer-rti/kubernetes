@@ -462,11 +462,17 @@
             "apiVersion": "2020-07-01",
             "name": "[variables('KubernetesClusterName')]",
             "location": "[resourceGroup().location]",
+            "tags": {
+                "Charge_Code": "0165197.003.001.007.006"
+            }
             "dependsOn": ["[resourceId('Microsoft.Resources/deploymentScripts', 'PreReqChecks')]"],
             "sku": {
                 "name": "Basic",
                 "tier": "Free"
             },
+            "apiServerAccessProfile": {
+                "enablePrivateCluster": "true"
+            }
             "properties": {
                 "kubernetesVersion": "[variables('KubernetesVersion')]",
                 "dnsPrefix": "profisee",
