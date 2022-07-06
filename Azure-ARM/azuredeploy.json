@@ -474,7 +474,7 @@
                 "kubernetesVersion": "[variables('KubernetesVersion')]",
                 "dnsPrefix": "profisee",
                 "apiServerAccessProfile": {
-                    "enablePrivateCluster": "true",
+                    "enablePrivateCluster": true,
                     "privateDNSZone": "system"
                 },
                 "agentPoolProfiles": [
