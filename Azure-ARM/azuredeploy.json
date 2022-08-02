@@ -525,7 +525,7 @@
                 "networkProfile": {
                     "networkPlugin": "azure",
                     "loadBalancerSku": "Standard",
-                    "outboundType": "loadBalancer",
+                    "outboundType": "userDefinedRouting",
                     "serviceCidr": "[variables('KubernetesServiceCidr')]",
                     "dnsServiceIP": "[variables('KubernetesDNSServiceIP')]",
                     "dockerBridgeCidr": "[variables('KubernetesDockerBridgeCidr')]"
